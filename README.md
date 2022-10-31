@@ -1,40 +1,44 @@
-# Citizon Log
+# Citizen Log
 
 ***The plugin manages the "Logging" for operations.***
 
 
-## Citizon Log
+## Citizen Log
 | Item         |          Value           |
 |--------------|:------------------------:|
-| Icon         | ![Citizon Log](icon.png) |
-| Display Name |     **Citizon Log**      |
+| Icon         | ![Citizen Log](icon.png) |
+| Display Name |     **Citizen Log**      |
 
 ### Arun Kumar (arunk@argos-labs.com)
 
 * [Email](mailto:arunk@argos-labs.com) 
  
 ## Version Control 
-* [4.1014.1431](setup.yaml)
-* Release Date: `October 14, 2022`
+* [4.1031.1312](setup.yaml)
+* Release Date: `October 31, 2022`
 
 ## Input (Required)
-| Function type | Parameters                         | Output                            |
-|---------------|------------------------------------|-----------------------------------|
-| Initialize    | Output Folder                      | (Output File Path with datetime)  |
-|               | File Type                          |                                   |
-|               | FIle Name                          |                                   |
-| Initialize    | Output Folder                      | (Output File Path with date only) |
-|               | File Type                          |                                   |
-|               | FIle Name without time             |                                   |
-|               | FIle Name                          |                                   |
-| Add Log       | Output Folder                      | (Output File Path )               |
-|               | File Type                          |                                   |
-|               | FIle Name (Initialize output file) |                                   |
-|               | Event Log Message                  |                                   |
-
+| Function type | Parameters                     | Output              |
+|---------------|--------------------------------|---------------------|
+| Initialize    | Output Folder                  | (Output File Path)  |
+|               | File Type                      |                     |
+|               | DateTime Format                |                     |
+|               | FIle Name                      |                     |
+| Add Log       | Output Folder                  | (Output File Path ) |
+|               | File Type                      |                     |
+|               | DateTime Format                |                     |
+|               | Log File Path                  |                     |
+|               | Event Log Message              |                     |
+| Add Log       | Output Folder                  | (Output File Path ) |
+|               | File Type                      |                     |
+|               | DateTime Format                |                     |
+|               | Event Time With Single Quotes  |                     |
+|               | Log File Path                  |                     |
+|               | Event Log Message              |                     |
 
 Note:-
-1. Add Log FIle Name will be the output of Initialize.
+1. Add Log- Log File Path will be the output of Initialize.
+2. File name having '/' or ':' auto remove.
 
 ## Return Value
 
@@ -63,9 +67,9 @@ You may choose one of 3 output formats below,
 
 ### Initialize:
 
-![Citizon Log Input Data](README_1.png)
+![Citizen Log Input Data](README_1.png)
 
 ### Add Log:
 
-![Citizon Log Input Data](README_2.png)
+![Citizen Log Input Data](README_2.png)
 

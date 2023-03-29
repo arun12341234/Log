@@ -1,55 +1,69 @@
-# Citizen Log
+# OCI
 
-***The plugin manages the "Logging" for operations.***
+***This plugin allows oci upload files to oci and download files from oci.***
 
 
-## Citizen Log
-| Item         |          Value           |
-|--------------|:------------------------:|
-| Icon         | ![Citizen Log](icon.png) |
-| Display Name |     **Citizen Log**      |
+## Box II
+| Item         |       Value        |
+|--------------|:------------------:|
+| Icon         |  ![OCI](icon.png)  |
+| Display Name |      **OCI**       |
 
-### Arun Kumar (arunk@argos-labs.com)
+## Arun Kumar (ak080495@gmail.com)
 
-* [Email](mailto:arunk@argos-labs.com) 
+Arun Kumar
+* [Email](mailto:ak080495@gmail.com) 
  
 ## Version Control 
-* [4.1031.1312](setup.yaml)
-* Release Date: `October 31, 2022`
+* [4.329.923](setup.yaml)
+* Release Date: `March 29, 2023`
+
+
+## Primary Features
+Upload and download the files from OCI.
+
+## Get credentials from Oci console
+
+1. Get Required Keys: https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm
+
+
+### Note:-
+<ul>
+    <li>Fingerprint must match to key file.</li>
+    <li>Key File will be Private Key(.pam file).</li>
+</ul>
+
 
 ## Input (Required)
-| Function type | Parameters                     | Output              |
-|---------------|--------------------------------|---------------------|
-| Initialize    | Output Folder                  | (Output File Path)  |
-|               | File Type                      |                     |
-|               | DateTime Format                |                     |
-|               | FIle Name                      |                     |
-| Add Log       | Output Folder                  | (Output File Path ) |
-|               | File Type                      |                     |
-|               | DateTime Format                |                     |
-|               | Log File Path                  |                     |
-|               | Event Log Message              |                     |
-| Add Log       | Output Folder                  | (Output File Path ) |
-|               | File Type                      |                     |
-|               | DateTime Format                |                     |
-|               | Event Time With Single Quotes  |                     |
-|               | Log File Path                  |                     |
-|               | Event Log Message              |                     |
+| OP Type         | Selection      | Default Value          |
+|-----------------|----------------|------------------------|
+| Upload Files    | User           | (message success)      |
+|                 | Fingerprint    |                        |
+|                 | Key File       |                        |
+|                 | Tenancy        |                        |
+|                 | Region         |                        |
+|                 | File to Upload |                        |
+|                 | Bucket Name    |                        |
+| Download Files  | User           | (Downloaded file path) |
+|                 | Fingerprint    |                        |
+|                 | Key File       |                        |
+|                 | Tenancy        |                        |
+|                 | Region         |                        |
+|                 | Bucket Name    |                        |
+|                 | Object Name    |                        |
+|                 | Output Path    |                        |
 
-Note:-
-1. Add Log- Log File Path will be the output of Initialize.
-2. File name having '/' or ':' auto remove.
 
 ## Return Value
 
 ### Normal Case
-Description of the output result
+Description of output result
 
 ## Return Code
-| Code | Meaning             |
-|------|---------------------|
-| 0    | Success             |
-| 99   | Exceptional case    |
+| Code | Meaning                      |
+|------|------------------------------|
+| 0    | Success                      |
+| 99   | Exceptional case             |
 
 ## Output Format
 You may choose one of 3 output formats below,
@@ -65,11 +79,17 @@ You may choose one of 3 output formats below,
 
 ## Operations
 
-### Initialize:
+### Upload Files:
 
-![Citizen Log Input Data](README_1.png)
+![OCI Input Data](README_Upload.png)
 
-### Add Log:
+### Download Files:
 
-![Citizen Log Input Data](README_2.png)
+![OCI Input Data](README_Download.png)
+
+
+
+
+
+
 
